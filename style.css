@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* code here */
+
+body {margin: 55px}
+.clock {
+  position: relative;
+  width: 840px;
+  height: 850px;
+  background-image: url("clock-bg.png");
+  margin: 0px auto;
+}
+
+.seconds {
+  position: absolute;
+  top: 129px;
+  left: 423px;
+  height: 300px;
+  width: 3px;
+  background: #777;
+  transform: rotate(6deg);
+  transform-origin: 0% 100%;
+  animation: seconds 60s linear infinite;
+}
+  @keyframes seconds{
+  100%{
+    transform: rotate(360deg)
+  }
+}
+.minutes {
+    position: absolute;
+    top: 179px;
+    left: 419px;
+    height: 250px;
+    width: 4px;
+    background: #111;
+    /* transform: rotate(45deg); */
+    transform-origin: 0% 100%;
+    animation: minutes 600s linear infinite;
+  }
+  @keyframes minutes{
+    100%{
+      transform: rotate(360deg)
+    }
+  }
+
+  .hours {
+    position: absolute;
+    top: 257px;
+    left: 419px;
+    height: 170px;
+    width: 7px;
+    background: #000;
+    /* transform: rotate(93deg); */
+    transform-origin: 0% 100%;  
+    animation: hours 6000s linear infinite;
+  }
+  @keyframes hours{
+    100%{
+      transform: rotate(360deg)
+    }
+  }
+  .dot {
+    position: absolute;
+    top: 423px;
+    left: 415px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    
+    background:#000;
+    transform-origin: -50% -50%;
+  }
